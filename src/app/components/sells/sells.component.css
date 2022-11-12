@@ -1,0 +1,22 @@
+label
+{
+    font-size: 17px;
+}
+
+.head
+{
+    padding-top: 100px !important;
+}
+.head h2
+{
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    
+}
+

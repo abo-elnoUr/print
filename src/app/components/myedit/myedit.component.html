@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="head text-center w-100 pt-5">
+  <h2 class="w-50 m-auto">edit</h2>
+</div>
+<div *ngIf="serial">
+  <form [formGroup]="form">
+    <div class="form-group-mine w-100 form-group text-center">
+      <label class="text-white">السيريال</label>
+      <input
+        [(ngModel)]="serial_m"
+        formControlName="serial"
+        disabled
+        #input1
+        name="input1"
+        type="text"
+        class="form-control w-25 text-center"
+        autocomplete="off"
+      />
+      <label class="text-white">اسم المنتج</label>
+      <input
+        [(ngModel)]="name_m"
+        formControlName="name"
+        name="input2"
+        type="text"
+        class="form-control w-25 text-center"
+        autocomplete="off"
+      />
+      <label class="text-white">سعر البيع</label>
+      <input
+        [(ngModel)]="price_m"
+        formControlName="price"
+        name="input3"
+        type="text"
+        class="form-control w-25 text-center"
+        autocomplete="off"
+      />
+      <label class="text-white">سعر الشراء</label>
+      <input
+        [(ngModel)]="price_m2"
+        formControlName="price2"
+        name="input4"
+        type="text"
+        class="form-control w-25 text-center"
+        autocomplete="off"
+      />
+      <label class="text-white">الكميه</label>
+      <input
+        [(ngModel)]="quantity_m"
+        formControlName="quantity"
+        name="input5"
+        type="text"
+        class="form-control w-25 text-center"
+        autocomplete="off"
+      />
+    </div>
+    <div class="text-center">
+      <button
+        type="submit"
+        class="btn btn-primary mt-2 mr-2"
+        (click)="onUpdate()"
+      >
+        <i class="fas fa-check-circle mr-3"></i>Edit
+      </button>
+      <button
+        type="submit"
+        class="btn btn-danger mt-2 ml-2"
+        (click)="onDelete()"
+      >
+        <i class="fas fa-trash-alt mr-3"></i>Delete
+      </button>
+    </div>
+  </form>
+</div>
+<div *ngIf="!serial">
+  <h1 class="text-white">item not found !</h1>
+  <section class="error-container">
+    <span class="four"><span class="screen-reader-text">4</span></span>
+    <span class="zero"><span class="screen-reader-text">0</span></span>
+    <span class="four"><span class="screen-reader-text">4</span></span>
+  </section>
+  <div class="text-center">
+    <a routerLink="/edit" class="btn bg-primary text-white border-0 my-5 mr-4"
+      ><i class="fas fa-arrow-left"></i> Go Back</a
+    >
+    <a routerLink="/home" class="btn bg-warning text-white border-0 my-5"
+      ><i class="fas fa-home"></i> Go Home</a
+    >
+  </div>
+</div>
+<app-footer></app-footer>

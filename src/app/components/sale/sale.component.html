@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="head text-center w-100 pt-5">
+  <h2 class="w-50 m-auto"><span>AUOF</span>store</h2>
+</div>
+
+<form [formGroup]="addForm" novalidate>
+  <div class="search text-center w-100 form-group form-group-mine pt-5">
+    <input
+      class="form-control p-3 w-25 m-auto text-center"
+      type="text"
+      name="quantity"
+      hidden
+      value="1"
+      #quantity
+    />
+    <input
+      class="form-control m-auto p-3 w-25 text-center"
+      type="text"
+      name="name"
+      formControlName="name"
+      placeholder="بيع بالاسم"
+      autocomplete="off"
+    />
+    <input
+      class="form-control m-2 p-3 w-25 m-auto text-center"
+      type="text"
+      name="serial"
+      formControlName="serial"
+      placeholder="او بيع بالسيريال"
+      autocomplete="off"
+    />
+  </div>
+  <div class="text-center">
+    <button
+      type="submit"
+      class="btn mybtn btn-primary mt-3 w-25"
+      (click)="onSubmit(quantity.value)"
+    >
+      add to bill
+    </button>
+  </div>
+</form>
+
+<div *ngIf="!show" class="table-mine w-75">
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>delete</th>
+        <th>price</th>
+        <th>serial</th>
+        <th>name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of newdata; index as index">
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="deleteFromPill(prod.serial, index)"
+          >
+            Delete
+          </button>
+        </td>
+        <td>{{ prod.price }}</td>
+        <td>{{ prod.serial }}</td>
+        <td>{{ prod.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="text-center w-75 m-auto pt-4" *ngIf="show">
+  <p class="alert alert-danger">This device Out of stock</p>
+</div>
+
+<div class="text-center">
+  <a routerLink="/print" class="text-white btn btn-warning mb-5"
+    ><i class="fas fa-print mr-3"></i>
+    go to print
+  </a>
+  <button class="btn btn-danger ml-3 mb-5" (click)="resetPill()">
+    <i class="fas fa-eraser mr-3"></i>Clear Pill
+  </button>
+</div>
+
+<app-footer></app-footer>

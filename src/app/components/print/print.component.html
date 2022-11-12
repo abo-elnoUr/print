@@ -1,0 +1,128 @@
+<app-navbar></app-navbar>
+<div class="head text-center w-100 pt-5">
+  <h2 class="w-50 m-auto">Add Cutomer & Print</h2>
+</div>
+<div class="pt-5 bg-transparent">
+  <form class="text-center" [formGroup]="addForm">
+    <div class="form-group-mine w-100 form-group text-center">
+      <input
+        type="text"
+        class="form-control w-25"
+        name="namecustomer"
+        placeholder="customer name"
+        autocomplete="off"
+        formControlName="namecustomer"
+      />
+
+      <input
+        type="text"
+        class="form-control w-25"
+        name="mobile"
+        autocomplete="off"
+        placeholder="customer mobile"
+        formControlName="mobile"
+      />
+
+      <input
+        type="text"
+        class="form-control w-25"
+        name="pay"
+        autocomplete="off"
+        placeholder="the amount paid"
+        formControlName="pay"
+        value=""
+      />
+    </div>
+    <div class="submit text-center">
+      <button
+        type="submit"
+        class="btn btn-primary mt-2 mb-5"
+        (click)="onSubmit()"
+      >
+        Add Customer
+      </button>
+    </div>
+  </form>
+</div>
+<div class="head text-center w-100 pt-5">
+  <h2 class="w-50 m-auto">Pill</h2>
+</div>
+
+<!-- --------print---------- -->
+
+<div class="form-group text-center print">
+  <div class="mypill" id="myPill">
+    <h2 class="text-center pt-5 overflow-hidden">Sales Receipt</h2>
+    <div class="company pt-0 mt-0 m-auto d-flex align-items-center flex-column">
+      <p class="lead">
+        <strong
+          style="
+            font-size: 40px;
+            font-family: 'Aquire', sans-serif;
+            font-weight: bold;
+          "
+          >AUOF </strong
+        ><strong style="font-size: 22px; font-weight: 500"> store</strong>
+      </p>
+    </div>
+    <div class="data w-50">
+      <!-- <p class="lead text-left"><strong>Mobile: </strong>01010015143</p> -->
+      <p class="lead text-left">
+        <strong>Customer name: </strong>{{ customerName }}
+      </p>
+      <p *ngIf="username" class="lead text-left">
+        <strong>Seller Name: </strong>{{ username }}
+      </p>
+      <p class="lead text-left"><strong>Date: </strong>{{ jstoday }}</p>
+    </div>
+
+    <table class="table table-bordered table-mine w-50" id="table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>#</th>
+          <th>name</th>
+          <th>serial</th>
+          <th>price</th>
+          <th>quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of newdata; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ prod.name }}</td>
+          <td>{{ prod.serial }}</td>
+          <td>{{ prod.price }}</td>
+          <td>{{ prod.quantity }}</td>
+        </tr>
+        <!-- <tr>
+          <td colspan="4" class="text-right">total {{ finaly }} L.E</td>
+        </tr> -->
+      </tbody>
+    </table>
+    <div class="data w-50">
+      <p class="text-left"><strong>Total: </strong>{{ finaly }} L.E</p>
+
+      <p class="text-left"><strong>The amount paid: </strong>{{ payed }} L.E</p>
+    </div>
+    <p class="facebook text-center">
+      Visit us on Facebook <a><strong> Auof Store</strong></a>
+    </p>
+    <p class="text-center">Mobile: <strong>01010015143 </strong></p>
+
+    <p class="text-center" style="font-size: 12px">
+      99 Gamal Abd El-Nasir Rd, From Mohamed Naguib Square - Alexandria
+    </p>
+  </div>
+
+  <button
+    class="btn btn-primary mr-3 mb-5"
+    (click)="printComponent(customerName)"
+  >
+    <i class="fas fa-print mr-3"></i>Print
+  </button>
+  <a routerLink="/" class="btn btn-success mb-5 mr-3"
+    ><i class="fas fa-home mr-3"></i>Home</a
+  >
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,44 @@
+.print label {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  color: #eee;
+  margin-top: 20px;
+}
+
+.table-mine {
+  margin: 0 auto 10px !important;
+  text-align: center;
+  font-size: 13px;
+}
+
+.pill {
+  width: 50%;
+  margin: auto;
+}
+
+.company {
+  margin: 80px auto 0 !important;
+  text-align: inherit;
+}
+
+.form-group-mine input {
+  margin: 30px auto !important;
+}
+.head {
+  padding-top: 100px !important;
+}
+
+.head h2 {
+  font-size: 20px;
+  /* font-family: "Lalezar", cursive; */
+  font-weight: 700;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px 40px;
+  background-color: #fff;
+}
+
+.data {
+  margin: 0 auto 10px !important;
+}

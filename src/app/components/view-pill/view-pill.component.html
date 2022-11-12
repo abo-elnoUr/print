@@ -1,0 +1,48 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="label" id="myPill">
+  <h2>Sales Receipt</h2>
+  <div class="d-flex align-items-center flex-column">
+    <p class="lead">
+      <strong
+        style="font-size: 40px; font-family: 'Aquire Bold'; font-weight: bold"
+        >AUOF </strong
+      ><strong style="font-size: 22px; font-weight: 500"> store</strong>
+    </p>
+  </div>
+  <div class="data">
+    <p *ngIf="username" class="lead text-left">
+      <strong>Seller Name: </strong>{{ username }}
+    </p>
+  </div>
+
+  <table class="table table-bordered table-mine" id="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>name</th>
+        <th>serial</th>
+        <th>price</th>
+        <th>customer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of pill; let i = index">
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.serial }}</td>
+        <td>{{ prod.price }}</td>
+        <td>{{ prod.namecustomer }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="facebook text-center">
+    Visit us on Facebook <a><strong> Auof Store</strong></a>
+  </p>
+  <p class="text-center">Mobile: <strong>01010015143 </strong></p>
+
+  <p class="text-center" style="font-size: 16px">
+    99 Gamal Abd El-Nasir Rd, From Mohamed Naguib Square - Alexandria
+  </p>
+</div>
+<div class="page-break"></div>
+
+<!-- <app-footer></app-footer> -->

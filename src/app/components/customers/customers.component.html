@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="head text-center w-100 pt-5">
+  <h2 class="w-50 m-auto">Customers</h2>
+</div>
+<form [formGroup]="form">
+  <div class="search w-25">
+    <input
+      [(ngModel)]="search"
+      formControlName="name"
+      #input1
+      class="form-control text-center"
+      type="text"
+      name="name"
+      placeholder="search by name"
+      autocomplete="off"
+    />
+  </div>
+</form>
+<div class="text-center mt-5 table-mine">
+  <table class="table table-bordered w-100" id="myTable">
+    <thead>
+      <tr>
+        <th>Delete</th>
+        <th>Price</th>
+        <th>Customer Name</th>
+        <th>Mobile</th>
+        <th>Device Name</th>
+        <th>serial</th>
+        <th>#</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let co of customers | LockFilter: search; let i = index">
+        <td>
+          <button
+            class="btn btn-danger"
+            (click)="deleteRow(co.serial, co.namecustomer)"
+          >
+            Delete
+          </button>
+        </td>
+
+        <td>{{ co.price }}</td>
+        <td>{{ co.namecustomer }}</td>
+        <td>{{ co.mobile }}</td>
+        <td>{{ co.name }}</td>
+        <td>{{ co.serial }}</td>
+        <td>{{ i + 1 }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a routerLink="/home" class="btn btn-warning my-5 text-white"
+    ><i class="fas fa-home"></i>Home</a
+  >
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,19 @@
+body
+{
+    background-color: #343A40;
+}
+
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 0 !important;
+    background-color: #343A40;
+    width: 100%;
+    color: aliceblue;
+}
+
+.footer .link-mine
+{
+    color: goldenrod;
+}

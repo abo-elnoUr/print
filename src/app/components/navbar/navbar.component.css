@@ -1,0 +1,20 @@
+/* *
+{
+    box-sizing: border-box;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.navbar-mine {
+  padding: 0 16px !important;
+}
+nav .navbar-brand-mine {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+}
+
+nav .img-mine {
+  padding-top: 16px;
+}
+nav .nav-item a {
+  font-family: "Lato", sans-serif;
+}

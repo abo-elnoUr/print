@@ -1,0 +1,152 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  /* border: 0; */
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  border-color: black !important;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+@page {
+  margin: 0cm 0cm 0cm 0cm;
+  width: 7.9cm;
+}
+
+body {
+  width: 7.9cm;
+  margin: 0cm 0cm 0cm 0cm;
+  margin-top: 0.05cm;
+  margin-left: 0.05cm;
+  color: black;
+  background-color: white;
+  border-color: black !important;
+}
+
+.label {
+  width: 7.9cm;
+  padding: 0.1cm 0.1cm 0 0.1cm;
+  margin-right: 0in;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  font-size: 15pt;
+  font-weight: bold;
+  color: black;
+  border-color: black !important;
+  background-color: white;
+}
+
+.page-break {
+  clear: left;
+  display: block;
+  page-break-after: always;
+}
+
+table {
+  font-size: 11pt;
+  font-weight: bold;
+  color: black !important;
+}

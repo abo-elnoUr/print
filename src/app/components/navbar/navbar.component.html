@@ -1,0 +1,182 @@
+<nav
+  class="navbar .navbar-mine navbar-expand-md navbar-dark fixed-top w-100 bg-primary bg-dark"
+>
+  <a class="navbar-brand navbar-brand-mine" routerLink="/home">
+    <!-- <img
+      src="../../../assets/icon.png"
+      width="30"
+      height="30"
+      class="d-inline-block .img-mine"
+    /> -->
+    <span class="text-warning">AUOF </span>
+    <span style="font-size: 18px">store</span>
+  </a>
+  <button
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-primary rounded"
+          *ngIf="logoutbtn"
+          routerLink="/admin"
+          >Add Product</a
+        >
+      </li>
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-primary rounded"
+          *ngIf="logoutbtn"
+          routerLink="/edit"
+          >Edit</a
+        >
+      </li>
+      <li class="nav-item pr-3">
+        <a class="nav-link border border-warning rounded" routerLink="/sale"
+          >Sale | البيع</a
+        >
+      </li>
+
+      <li class="nav-item pr-3">
+        <a class="nav-link border border-warning rounded" routerLink="/products"
+          >Products | المنتجات</a
+        >
+      </li>
+
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-warning rounded"
+          routerLink="/customers"
+          >Customers | العملاء</a
+        >
+      </li>
+
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-warning rounded"
+          routerLink="/storepill"
+          >Pills | الفواتير</a
+        >
+      </li>
+
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-primary rounded"
+          *ngIf="logoutbtn"
+          routerLink="/sells"
+          >The Sales</a
+        >
+      </li>
+      <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-primary rounded"
+          *ngIf="logoutbtn"
+          routerLink="/yearsells"
+          >Annual sales</a
+        >
+      </li>
+      <!-- <li class="nav-item pr-3">
+        <a
+          class="nav-link border border-primary rounded"
+          *ngIf="logoutbtn"
+          routerLink="/register"
+          >Add Admin</a
+        >
+      </li> -->
+    </ul>
+    <ul class="ml-auto navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="btn btn-primary" *ngIf="loginbtn" routerLink="/login"
+          >Login</a
+        >
+      </li>
+      <li class="nav-item">
+        <button
+          type="button"
+          *ngIf="logoutbtn"
+          class="btn btn-danger"
+          (click)="logout()"
+        >
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--
+<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+  <a class="navbar-brand" routerLink="home" routerLinkActive="active"
+    >Angular RegisterAndLogin</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarsExample"
+    aria-controls="navbarsExample"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          *ngIf="loginbtn"
+          routerLink="./home"
+          routerLinkActive="active"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          *ngIf="loginbtn"
+          routerLink="./login"
+          routerLinkActive="active"
+          >Login</a
+        >
+      </li>
+      <li class="nav-item">
+        <button
+          type="button"
+          *ngIf="logoutbtn"
+          class="btn btn-block"
+          (click)="logout()"
+        >
+          logout
+        </button>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          *ngIf="logoutbtn"
+          routerLink="../register"
+          routerLinkActive="active"
+          >Registration</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          *ngIf="logoutbtn"
+          routerLink="../admin"
+          routerLinkActive="active"
+          >Dashboard</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav> -->

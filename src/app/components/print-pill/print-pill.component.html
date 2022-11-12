@@ -1,0 +1,57 @@
+<!-- <button class="btn mr-3 mb-5" (click)="printComponent('myPill')">Print</button> -->
+
+<div class="label" id="myPill">
+  <h2 class="">Sales Receipt</h2>
+  <div class="d-flex align-items-center flex-column">
+    <p class="lead">
+      <strong
+        style="font-size: 40px; font-family: 'Aquire Bold'; font-weight: bold"
+        >AUOF </strong
+      ><strong style="font-size: 22px; font-weight: 500"> store</strong>
+    </p>
+  </div>
+  <div class="data">
+    <p class="lead text-left">
+      <strong>Customer name: </strong> {{ nameCustomer }}
+    </p>
+    <p *ngIf="username" class="lead text-left">
+      <strong>Seller Name: </strong>{{ username }}
+    </p>
+    <p class="lead text-left"><strong>Date: </strong>{{ jstoday }}</p>
+  </div>
+
+  <table class="table table-bordered table-mine" id="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>serial</th>
+        <th>price</th>
+        <!-- <th>quantity</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of newdata; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.serial }}</td>
+        <td>{{ prod.price }}</td>
+        <!-- <td>{{ prod.quantity }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="data">
+    <p class="text-left"><strong>Total: </strong>{{ finaly }} L.E</p>
+  </div>
+  <p class="facebook text-center">
+    Visit us on Facebook <a><strong> Auof Store</strong></a>
+  </p>
+  <p class="text-center">Mobile: <strong>01010015143 </strong></p>
+
+  <p class="text-center" style="font-size: 16px">
+    99 Gamal Abd El-Nasir Rd, From Mohamed Naguib Square - Alexandria
+  </p>
+</div>
+
+<div class="page-break"></div>
